@@ -22,6 +22,11 @@
        ->:wq(保存并退出)
 - cat 文件名  查看文件
 
+
+切换账号:git config credential.helper ''
+
+保存账号git config credential.helper store
+
 ## 创建本地git仓库
  - 新建文件夹 ，右击git bash here ,当前文件夹目录为基准打开git窗口
  - git init  初始化git仓库 .git
@@ -66,6 +71,24 @@ New repository - >仓库名 create repository
  - git push origin master 提交到远程仓库
 
 ## 获取每天上课的课件
+git clone  https://github.com/zfpx/201801JS.git
+git pull origin master
+
+## 组长如何把作业提交到老师的仓库
+ - 先以我的用户名，密码登入github
+ - https://github.com/zfpx/201801JS 黏贴到地址栏按回车
+ - 点fork按钮 相当于把老师的仓库克隆一份到我的仓库
+ - git clone https://github.com/amgYen/201801JS.git  把从老师那fork过来的远程仓库克隆到本地
+ - cd 201801JS
+ - git add .
+ - git commit -m"作业"
+ - git push origin master
+ - 点击按钮new pull request - >create pull request
+
+ 老师或组长做的事情merge pull request 或者close pull request
+
+
+
 
 
 
