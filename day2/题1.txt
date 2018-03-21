@@ -1,0 +1,88 @@
+var ary = [1, 2, 3, 4];
+    function fn(ary) {
+        ary[0] = 0;
+        ary = [0];
+        ary[0] = 100;
+        return ary;
+    }
+    var result = fn(ary);
+    console.log(result);
+    console.log(ary);
+
+
+    var n = 20;
+    function fn(n){
+          alert(n);
+          n = 10;
+    }
+    var m = 5;
+    fn(m);
+    alert(n)
+
+    var n=0;
+    function a(){
+        var n=10;
+        function b(){
+            n++;
+            alert(n);
+        }
+        b();
+
+    }
+    a();
+    alert(n);
+
+    console.log(num,str);
+    var num = 18;
+    var str = "lily";
+    function fn2(){
+        console.log(str,num);
+        num = 19;
+        str = "candy";
+        var num = 14;
+        console.log(str,num);
+    }
+    fn2();
+    console.log(str,num);
+
+    if(!("a" in  window)){
+           var a = 13;
+       }
+       console.log(a);
+     fn();
+    if(9==8){
+           function fn(){alert(1)};
+       }
+
+           console.log(a);
+           function a(){
+              alert(5);
+           }
+           var  a= 10;
+           console.log(a);
+
+           fn();
+               function fn(){console.log(1)};
+               fn();
+               var fn = 13;
+               fn();
+               function fn(){console.log(2)};
+               fn();
+
+
+               (function f(){
+                      function f(){ return 1; }
+                       alert (f());
+                      function f(){ return 2; }
+                  })();
+
+              f = function(){return true};
+                  g = function(){return false};
+                  (function (){
+                      if(g()&&[]==![]){//在标准浏览器下g是undefined,所以报错
+                          f = function f(){return false};
+                          function g(){return true};
+                      }
+                  })();
+                  alert(f());
+                  alert(g());
